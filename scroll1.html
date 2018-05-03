@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function move_square(){
+var movable = document.getElementById('moving_div');
+var position = 0;	
+//var position1 = 400;
+var interval = setInterval(scrolling,5);
+
+function scrolling(){
+
+
+position++;
+if(position>400){
+
+console.log(position1);
+	movable.style.top = 	position1+'px';
+	movable.style.left = 	position1+'px';
+	position1--;
+	
+if(position1==0){
+	position = 0;
+	position1 = 400;
+	//clearInterval(interval);
+}
+
+} else {
+	
+	
+	movable.style.top = 	position+'px';
+	movable.style.left = 	position+'px';
+
+}
+}
+
+}
+
+</script>
+
+<style>
+#main_div{ background:#000;width:500px;height:500px;position:relative;}
+#moving_div{ background:#ccc; width:100px;height:100px; position:absolute; /*bottom:0px;right:0px;*/}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="main_div">
+
+<div id="moving_div">
+
+</div>
+
+</div>
+
+<input type="button" value="Move" onclick="move_square()" >
+ 
+
+
+</body>
+</html>
